@@ -11,9 +11,15 @@ const types = {
 }
 
 const price = types[type];
-const discount = quantity > 10 ? 0.9 : 1;
 
-const total = quantity * price * discount;
+if(price === undefined ) {
+    alert('Érvénytlen típus')
+}else{
+    const discount = quantity > 10 ? 0.9 : 1;
+    const total = quantity * price * discount;
+    alert(total)
+}
+
 
 alert(total);
 
